@@ -1,0 +1,33 @@
+{
+  "name": "caviste",
+  "version": "1.0.0",
+  "description": "Application de gestion de vin",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-Boudart/caviste.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JAVASCRIPT"
+  ],
+  "author": "m-boudart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M-Boudart/caviste/issues"
+  },
+  "homepage": "https://github.com/M-Boudart/caviste#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
