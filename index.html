@@ -8,93 +8,99 @@
         <!-- Slick -->
         <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
 		<!-- CSS Perso -->
-        <link rel="stylesheet" href="design/design.css">
+        <link rel="stylesheet" href="design/style.css">
         
         <title>Caviste</title>
     </head>
     <body>
         <header class="row">
-            <div class="col-12">
-                <p> FR / NL</p>
+            <div class="col-md-12">
+                <p class="language text-xl-left"> FR / NL</p>
             </div>
-            <div class="col-4">
-                <img src="images/caviste_logo_black.png" alt="Logo caviste">
+            <div style="text-align: center;" class="col-md-6">
+                <img class="logo_header" src="images/caviste_logo_black.png" alt="Logo caviste">
             </div>
-            <div class="col-4">
-                <h1>Notre slogan</h1>
-            </div>
-            <nav class="col-4">
-                Menu bootstrap
+            <nav class="col-md-6">
+
             </nav>
+            <div class="slogan col-md-12">
+                <h1 class="text-xl-center">Toujours un bon vin en cave !</h1>
+            </div>
         </header>
         <div id="search-add-wine" class="row">
             <div class="col-12">
                 <form id="frmSearchAdd" action="http://localhost/caviste/index.php" method="GET">
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Votre recherche">
-                        <button name="btSearch">Rechercher</button>
-                        <button name="btAdd">Ajouter un vin</button>
+                    <div class="form_group">
+                        <!--Il serait bien d'alligner ces 3 éléments ci-dessous-->
+                        <input class="form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche">
+                        <button name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
+                            <span class="glyphicon glyphicon-search"></span> Rechercher
+                        </button>
+                        <button name="btAdd" type="button" class=" form-control col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg">Ajouter un vin</button>
                     </div>
                 </form>
             </div>
         </div>
-        <div id="main-content" class="row">
-            <div id="col-img" class="col-sm-12 col-md-4">
-                <img src="http://cruth.phpnet.org/epfc/caviste/pics/block_nine.jpg" alt="Bouteille de vin">
-            </div>
-            <div id="col-frmInfos" class="col-sm-12 col-md-4">
-                <form id="frmInfos" action="http://localhost/caviste/index.php" method="GET" enctype="multipart/form-data">
-                    <div class="form-group">	
-    					<label for="id">ID:</label>
-                        <input class="form-control" id="id" type="text" name="id" readonly required>
-					</div>
-                    <div class="form-group">
-    					<label for="name">Nom:</label>
-						<input class="form-control" id="name" type="text" name="name" required>
-					</div>
-					<div class="form-group">
-                       <label for="grapes">Grapes:</label>
-                        <input class="form-control" id="grapes" type="text" name="grapes" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="country">Pays:</label>
-                         <input class="form-control" id="country" type="text" name="country" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="region">Région:</label>
-                        <input class="form-control" id="region" type="text" name="region" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="year">Année:</label>
-                        <input class="form-control" id="year" type="text" name="year" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description:</label>
-                        <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
-                    </div>
-                    <div class="form-group text-center">
-                        <button name="btModifiy">Modifier</button>
-                        <button name="btDelete">Supprimer</button>
-                    </div>
-                </form>
-            </div>
-            <div id="col-tabWines" class="col-sm-12 col-md-4">
-            
+        <div class="forms_background col-12">
+            <div id="main-content" class="row">
+                <div id="col-img" class="bottle center-block col-sm-12 col-md-3">
+                    <img class="img-fluid" src="images/vin.png" alt="Bouteille de vin">
+                </div>
+                <div id="col-frmInfos" class="forms_wine col-sm-12 col-md-5">
+                    <form id="frmInfos" action="http://localhost/caviste/index.php" method="GET" enctype="multipart/form-data">
+                        <div class="form-group">	
+                            <label for="id">ID:</label>
+                            <input class="form-control" id="id" type="text" name="id" readonly required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nom:</label>
+                            <input class="form-control" id="name" type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="grapes">Grapes:</label>
+                            <input class="form-control" id="grapes" type="text" name="grapes" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Pays:</label>
+                            <input class="form-control" id="country" type="text" name="country" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="region">Région:</label>
+                            <input class="form-control" id="region" type="text" name="region" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Année:</label>
+                            <input class="form-control" id="year" type="text" name="year" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <button name="btModifiy" type="button" class="btn btn-outline-dark btn-lg">Modifier</button>
+                            <button name="btDelete" type="button" class="btn btn-outline-dark btn-lg">Supprimer</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="col-tabWines" class="col-tabWines col-sm-12 col-md-4">
+                 </div>
             </div>
         </div>
         <div id="div-carousel" class="row">
-            <div class="col-12">
-                <h2>Nos vins</h2>
-                <p>Slick Carousel</p>
+            <div class="carousel col-12">
+                <h2 class="title_carousel" >Nos vins</h2>
+                <p>carousel slick</p>
             </div>
         </div>
         <footer class="row">
             <div class="col-6">
-                <img src="images/caviste_logo_white.png" alt="Logo caviste">
+                <img class="logo_footer" src="images/caviste_logo_white.png" alt="Logo caviste">
             </div>
-            <div class="col-6">
-                <p>Contacts</p>
-                <p>Lorem ipsum....</p>
+            <div class="contact col-6">
+                <!--Si on résoud le problème des glyphicon Bootstrap on pourrait en placer dans les contacts-->
+                <p class="title_contact text-xl-left">Contacts</p>
+                <p class="text-lg-left">Lorem ipsum....</p>
+                <p class="text-lg-left">Lorem ipsum....</p>
             </div>
         </footer>
         <!-- Jquery -->
