@@ -1,0 +1,163 @@
+/* GENERAL DESIGN */
+
+body{
+    margin-top: none;
+    font-family: 'Rouge Script', cursive;
+    font-size: 1.5em;
+}
+
+/* HEADER */
+
+header{
+    background-image:url("../images/header.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat:no-repeat;
+    min-height:300px;
+}
+
+.language{
+    color:black;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-top: 20px;
+}
+
+h1{
+    font-family: 'Rouge Script', cursive;
+    padding-top: 200px;
+    padding-bottom: 40px;
+    padding-left: 5%;
+    font-size: 3em;
+    font-weight: bold;
+    color:white;
+    text-shadow: 5px 5px 5px grey;
+}
+
+.logo_header{
+    width:80%;
+    padding:10%
+}
+
+/* FORM */
+
+.form_group{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#frmSearchAdd > div > input{
+    font-size: 1.5em;
+}
+
+.bottle{
+    text-align: center;
+    background-image: url("../images/bottle_backgroung.jpg");
+}
+
+.forms_wine{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.forms_background{
+    background-image: url("../images/fond.jpg");
+    background-size: cover;
+    color: white;
+}
+
+#frmSearchAdd > div > button{
+    font-family: 'Rouge Script', cursive;
+    font-size: 1.5em;
+    border-color: black;
+    color:black;
+}
+
+#frmSearchAdd > div > button:hover {
+    color:white;
+    border-color: white;
+    background-color: black;
+}
+
+.btn{
+    font-family: 'Rouge Script', cursive;
+    border-color: white;
+    color: white;
+    font-size: 1.5em;
+}
+
+#frmInfos > div.form-group.text-center >:hover{
+    color:black;
+    border-color: black;
+    background-color: white;
+}
+
+/* CAROUSEL */
+
+.carousel{
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+}
+
+.title_carousel{
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.contact{
+    color: white;
+    font-size: 1.5em;
+}
+
+.title_contact{
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* FOOTER */
+
+.logo_footer{
+    width:80%;
+    padding:10%
+}
+
+footer{
+    font-family: 'Rouge Script', cursive;
+    background-image: url("../images/fond.jpg");
+    background-size: cover;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width:3000px){
+
+    body{
+        margin-top: none;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+}
+
+@media (min-width:1600px){
+
+    body{
+        margin-top: none;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media (min-width:1200px){
+
+    body{
+        margin-top: none;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
