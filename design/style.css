@@ -94,7 +94,23 @@ h1{
     border-color: black;
     background-color: white;
 }
+/* Tableau des vins */
+#col-tabWines table{
+    border: 1px solid white;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
+tr {
+    color: white;
+}
+
+tr:hover {
+    background-color: rgb(109, 40, 92);
+}
 /* CAROUSEL */
 
 .carousel{
