@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
 		<!-- CSS Perso -->
         <link rel="stylesheet" href="design/style.css">
-        
+        <!--Police-->
+        <link href="https://fonts.googleapis.com/css?family=Rouge+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
         <title>Caviste</title>
     </head>
     <body>
@@ -32,7 +34,7 @@
                 <form id="frmSearchAdd" action="http://localhost/caviste/index.php" method="GET">
                     <div class="form_group">
                         <!--Il serait bien d'alligner ces 3 éléments ci-dessous-->
-                        <input class="form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche">
+                        <input id="livesearch"class="searchbox form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche"> 
                         <button name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
                             <span class="glyphicon glyphicon-search"></span> Rechercher
                         </button>
@@ -48,7 +50,7 @@
                 </div>
                 <div id="col-frmInfos" class="forms_wine col-sm-12 col-md-5">
                     <form id="frmInfos" action="http://localhost/caviste/index.php" method="GET" enctype="multipart/form-data">
-                        <div class="form-group">	
+                        <div class="idlabel form-group">	
                             <label for="id">ID:</label>
                             <input class="form-control" id="id" type="text" name="id" readonly required>
                         </div>
@@ -89,7 +91,101 @@
         <div id="div-carousel" class="row">
             <div class="carousel col-12">
                 <h2 class="title_carousel" >Nos vins</h2>
-                <p>carousel slick</p>
+                <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-12 col-md-offset-3">
+                        <div class="slick-carousel">
+
+                          <div class="slick-item">
+                            <a href="http://lorempixel.com/300/250/" class="caption-link">
+                              <div class="caption-layer light-green">
+                                <div class="caption-content">
+                                  <h3>VIN1</h3>
+                                  <p class="hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio..</p>
+                                </div>
+                              </div>
+                              <img src="images\wines\generic.png" alt="Image" class="img-responsive">
+                            </a>
+                          </div>
+
+                          <div class="slick-item">
+                            <a href="http://lorempixel.com/960/250/food/1/" class="caption-link">
+                              <div class="caption-layer light-green">
+                                <div class="caption-content">
+                                  <h3>VIN2</h3>
+                                  <p class="hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio..</p>
+                                </div>
+                              </div>
+                              <img src="images\wines\rex_hill.png" alt="Image" class="img-responsive">
+                            </a>
+                          </div>
+
+                          <div class="slick-item">
+                            <a href="http://lorempixel.com/960/250/food/1/" class="caption-link">
+                              <div class="caption-layer light-green">
+                                <div class="caption-content">
+                                  <h3>VIN4</h3>
+                                  <p class="hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio..</p>
+                                </div>
+                              </div>
+                              <img src="images\wines\generic.png" alt="Image" class="img-responsive">
+                            </a>
+                          </div>
+
+                          <div class="slick-item">
+                            <a href="http://lorempixel.com/960/250/food/1/" class="caption-link">
+                              <div class="caption-layer light-green">
+                                <div class="caption-content">
+                                  <h3>VIN5</h3>
+                                  <p class="hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio..</p>
+                                </div>
+                              </div>
+                              <img src="images\wines\lan_rioja.png" alt="Image" class="img-responsive">
+                            </a>
+                          </div>
+                          
+                          <div class="slick-item">
+                            <a href="http://lorempixel.com/960/250/food/1/" class="caption-link">
+                              <div class="caption-layer light-green">
+                                <div class="caption-content">
+                                  <h3>VIN6</h3>
+                                  <p class="hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio..</p>
+                                </div>
+                              </div>
+                              <img src="images\wines\lan_rioja.png" alt="Image" class="img-responsive">
+                            </a>
+                          </div>
+
+                          <div class="slick-item">
+                            <a href="http://lorempixel.com/960/250/food/1/" class="caption-link">
+                              <div class="caption-layer light-green">
+                                <div class="caption-content">
+                                  <h3>VIN7</h3>
+                                  <p class="hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio..</p>
+                                </div>
+                              </div>
+                              <img src="images\wines\lan_rioja.png" alt="Image" class="img-responsive">
+                            </a>
+                          </div>
+
+                          <div class="slick-item">
+                            <a href="http://lorempixel.com/960/250/food/1/" class="caption-link">
+                              <div class="caption-layer light-green">
+                                <div class="caption-content">
+                                  <h3>VIN8</h3>
+                                  <p class="hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio..</p>
+                                </div>
+                              </div>
+                              <img src="images\wines\lan_rioja.png" alt="Image" class="img-responsive">
+                            </a>
+                          </div>
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
         <footer class="row">
@@ -106,12 +202,76 @@
         <!-- Jquery -->
         <script src="node_modules/jquery/dist/jquery.js"></script>
         <!-- Popper -->
-        <script src="node_modules/popper.js/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <!-- <script src="node_modules/popper.js/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
         <!-- Bootstrap -->
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- Slick -->
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script> -->
         <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
         <!-- Scripts perso -->
         <script src="lib/displayWines.js"></script>
+        <script>
+        // Caroussel slick a mettre dans le fichier .js
+                   
+        $(function() {
+            $('.slick-carousel').slick({
+                centerMode: true,
+                slidesToShow: 3,
+                draggable: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '45px',
+                    slidesToShow: 2
+                }
+                }, {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '45px',
+                    slidesToShow: 1
+                }
+                }]
+            }); // $('.slick-carousel')
+            
+                $('.slick-item').on('click', function(e) {
+                e.preventDefault();
+                let activity = $(this);
+                let title = activity.find('h3').text();
+                let desc = activity.find('p').text();
+                let img = activity.find('img').attr('src');
+                let html = '<div class="modal fade lightbox-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">';
+                html += '<div class="modal-dialog modal-lg" role="document">';
+                html += '<div class="modal-content">';
+                html += '<div class="modal-body">';
+                html += '<div class="caption">';
+                html += '<div class="caption-content">';
+                html += '<h3>' + title + '</h3>';
+                html += '</div>';
+                html += '</div>';
+                html += '<img src="images/wines/lan_rioja.png" alt="" class="img-responsive">';
+                html += '<p>' + desc + '</p>';
+                html += '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+                html += '</div>';
+                html += '</div>';
+                html += '</div>';
+                html += '</div>';
+                $("body").append(html);
+                $(".lightbox-modal").modal().on("hidden.bs.modal", function() {
+                $(this).remove()
+                })
+                return false;
+            });
+            
+        }); // (function)
+        </script>
     </body>
 </html>
