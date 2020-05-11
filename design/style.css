@@ -45,7 +45,6 @@ h1{
     display: none;
 }
 
-
 .form_group{
     padding-left: 10%;
     padding-right: 10%;
@@ -98,7 +97,6 @@ h1{
 
 #frmSearchAdd > div > input{
     font-size: 1em;
-    
 }
 
 :hover#searchbox{
@@ -110,8 +108,8 @@ h1{
     border-color: black;
     background-color: white;
 }
-/* Tableau des vins */
-#col-tabWines table{
+/* WINES TAB */
+#col-tabWines{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 1px solid white;
     width: auto;
@@ -121,10 +119,10 @@ h1{
     margin-bottom: auto;
 }
 input{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 textarea{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
 tr {
@@ -173,50 +171,51 @@ body {
     align-items: center;
   }
 
-  #div-carousel > div > div > div > div > div > button{
-      background-color: unset;
-      border: none;
+#div-carousel > div > div > div > div > div > button{
+    background-color: unset;
+    border: none;
   }
 
-  .slick-carousel .slick-item:hover {
+.slick-carousel .slick-item:hover {
     opacity: .7
   }
   
-  .slick-prev:before,
-  .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
     display: none;
   }
   
-  .slick-arrow {
+.slick-arrow {
     display: none;
   }
   
-  .slick-prev {
+.slick-prev {
     display: none;
   }
   
-  .slick-next {
+.slick-next {
     display: none;
   }
   
+/*  CAPTION  */
+
+.modal-body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
   
-  /**!
-  * Caption Styles
-  */
-  
-  .caption-item {  
+.caption-item {  
     right: 0;
     margin: 0px;
     padding: 0px;
   }
   
-  .caption-link {
+.caption-link {
     display: block;
     position: relative;
     margin: 0 auto;
   }
   
-  .caption-link .caption-layer {
+.caption-link .caption-layer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -226,24 +225,22 @@ body {
     transition: all ease .5s;
   }
   
-  .caption-layer.green {
+.caption-layer.green {
     background: white
   }
   
-  /* .caption-layer.light-green {
-    background: black;
-  } */
+/* CAPTION LAYER */
   
-  .caption-layer.blue {
+.caption-layer.blue {
     background: lightgrey;
   }
   
-  .caption-link .caption-layer:hover,
-  .caption-layer.video-icon {
+.caption-link .caption-layer:hover,
+.caption-layer.video-icon {
     opacity: 1;
   }
   
-  .caption-link .caption-layer .caption-content {
+.caption-link .caption-layer .caption-content {
     position: absolute;
     top: 35%;
     width: 100%;
@@ -252,7 +249,7 @@ body {
     color: #fff;
   }
   
-  .caption-link .caption-layer .caption-content p {
+.caption-link .caption-layer .caption-content p {
     display: none;
   }
 
