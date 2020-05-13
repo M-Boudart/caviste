@@ -12,6 +12,8 @@
         <!--Police-->
         <link href="https://fonts.googleapis.com/css?family=Rouge+Script&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/193745291d.js" crossorigin="anonymous"></script>
         <title>Caviste</title>
     </head>
     <body>
@@ -23,69 +25,137 @@
                 <img class="logo_header" src="images/caviste_logo_black.png" alt="Logo caviste">
             </div>
             <nav class="col-md-6">
-
+            <!--Le menu de navigation doit encore venir ici-->
             </nav>
             <div class="slogan col-md-12">
                 <h1 class="text-xl-center">Toujours un bon vin en cave !</h1>
             </div>
         </header>
-        <div id="search-add-wine" class="row">
+        <!--Les boutons de recherche à placer ici en dessous-->
+        <div class="forms_background col-12">
+          <div id="search-add-wine" class="row">
             <div class="col-12">
                 <form id="frmSearchAdd" action="http://localhost/caviste/index.php" method="GET">
                     <div class="form_group">
                         <!--Il serait bien d'alligner ces 3 éléments ci-dessous-->
                         <input id="livesearch" class="searchbox form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche"> 
                         <button name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
-                            <span class="glyphicon glyphicon-search"></span> Rechercher
+                            Rechercher
                         </button>
-                        <button name="btAdd" type="button" class=" form-control col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg">Ajouter un vin</button>
+                        <button name="btAdd" type="button" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">Ajouter un vin</button>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="forms_background col-12">
-            <div id="main-content" class="row">
-                <div id="col-img" class="bottle center-block col-sm-12 col-md-3">
-                    <img class="img-fluid" src="images/vin.png" alt="Bouteille de vin">
+            <div id="main-content" class="row conteiner-fluid">
+
+                <div class="row conteiner-fluid col-sm-12 col-md-8 order-sm-2">
+
+
+                  <!--IMAGE OF WINES-->
+                  <div class="bottle center-block col-sm-12 col-md-5 col">
+                    <div id="col-img" class="bottle-img img-fluid center-block">
+                        <img class="bottle-img img-fluid" src="images/vin.png" alt="Bouteille de vin">
+                    </div>
+                    <div>
+                        <img class="likeThisWine" src="images/likeThisWine.png">
+                    </div>
+                  </div>
+
+                  <!--INFO OF WINES-->
+                  <div id="col-frmInfos" class="forms_wine col-sm-12 col-md-7">
+                      <form id="frmInfos" action="http://localhost/caviste/index.php" method="GET" enctype="multipart/form-data">
+                          <div class="idlabel form-group">	
+                              <label for="id">ID:</label>
+                              <input class="form-control" id="id" type="text" name="id" readonly required>
+                          </div>
+                          <div class="form-group">
+                              <label for="name">Nom:</label>
+                              <input class="form-control" id="name" type="text" name="name" required>
+                          </div>
+                          <div class="form-group">
+                          <label for="grapes">Grapes:</label>
+                              <input class="form-control" id="grapes" type="text" name="grapes" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="country">Pays:</label>
+                              <input class="form-control" id="country" type="text" name="country" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="region">Région:</label>
+                              <input class="form-control" id="region" type="text" name="region" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="year">Année:</label>
+                              <input class="form-control" id="year" type="text" name="year" required>
+                          </div>
+
+
+
+                          <!--INSERER  PRIX &  CAPACITE-->
+                          <div class="price form-group">
+                            <label for="price">Prix:</label>
+                            <input class="form-control" id="price" type="text" name="price" required>
+                          </div>
+                          <div class="capacity form-group">
+                            <label for="capacity">Capacité:</label>
+                            <input class="form-control" id="capacity" type="text" name="capacity" required>
+                          </div>
+
+
+                          <div class="form-group">
+                              <label for="description">Description:</label>
+                              <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                          </div>
+                          <div class="form-group text-center">
+                              <button name="btModifiy" type="button" class="btn btn-outline-dark btn-lg">Modifier</button>
+                              <button name="btDelete" type="button" class="btn btn-outline-dark btn-lg">Supprimer</button>
+                          </div>
+                      </form>
+                    </div>
                 </div>
-                <div id="col-frmInfos" class="forms_wine col-sm-12 col-md-5">
-                    <form id="frmInfos" action="http://localhost/caviste/index.php" method="GET" enctype="multipart/form-data">
-                        <div class="idlabel form-group">	
-                            <label for="id">ID:</label>
-                            <input class="form-control" id="id" type="text" name="id" readonly required>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Nom:</label>
-                            <input class="form-control" id="name" type="text" name="name" required>
-                        </div>
-                        <div class="form-group">
-                        <label for="grapes">Grapes:</label>
-                            <input class="form-control" id="grapes" type="text" name="grapes" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="country">Pays:</label>
-                            <input class="form-control" id="country" type="text" name="country" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="region">Région:</label>
-                            <input class="form-control" id="region" type="text" name="region" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="year">Année:</label>
-                            <input class="form-control" id="year" type="text" name="year" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Description:</label>
-                            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
-                        </div>
-                        <div class="form-group text-center">
-                            <button name="btModifiy" type="button" class="btn btn-outline-dark btn-lg">Modifier</button>
-                            <button name="btDelete" type="button" class="btn btn-outline-dark btn-lg">Supprimer</button>
-                        </div>
-                    </form>
+                <!--LIST OF WINES-->
+                <div id="col-tabWines" class="col-tabWines col-sm-12 col-md-4 order-first">
                 </div>
-                <div id="col-tabWines" class="col-tabWines col-sm-12 col-md-4">
-                 </div>
+                  <!--LIST OF COMMENT              TO DO -->
+                  <div class="col-sm-12 col-md-8 order-sm-3">
+                    <div class="row">
+                      <div class="comment-container">
+                        <button class="btn btn-outline-dark btn-lg" type="button"><span style="color:#af001f;" class="fas fa-heart"></span> J'aime ce vin</button>
+                      </div>
+                      <div class="comment-container">
+                        <button class="btn btn-outline-dark btn-lg" type="button">Ajouter un commentaire</button>
+                        <button class="btn btn-outline-dark btn-lg" type="button">Modifier un commentaire</button>
+                      </div>
+                      <div class="comment-container">
+                        <section class="comments">
+                          <article class="comment">
+                            <a class="comment-img">
+                              <img src="images/caviste_logo_white.png" alt="image de profil utilisateur" height="120">
+                            </a>
+                            <div class="comment-body">
+                              <div class="text">
+                                <p>Ce vin est délicieux, achetez le sans attendre ! :) </p>
+                              </div>
+                              <p class="attribution">by <a href="#non">Besnik Hetemi</a> at 14:23pm, 4 Dec 2015</p>
+                            </div>
+                          </article>
+                            <article class="comment">
+                            <a class="comment-img">
+                              <img src="images/caviste_logo_white.png" alt="images de profil utilisateur"  height="120">
+                            </a>
+                            <div class="comment-body">
+                              <div class="text">
+                                <p>if you are interested for  more about me visited my profile on social page</p>
+                                <p>To visit me you can click my name  <a target="_blank" href="http://www.facebook.com/besnik.hetemii">Besnik Hetemi</a> and send me frends request or send me a message in inbox</p>
+                              </div>
+                              <p class="attribution">by <a href="#non">Besnik Hetemi</a> at 14:23pm, 4 Dec 2015</p>
+                            </div>
+                          </article>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
         <div id="div-carousel" class="row">
@@ -187,14 +257,15 @@
                   </div>
             </div>
         <footer class="row">
-            <div class="col-6">
+            <div class="col-sm-12 col-md-6">
                 <img class="logo_footer" src="images/caviste_logo_white.png" alt="Logo caviste">
             </div>
-            <div class="contact col-6">
+            <div class="contact col-sm-12 col-md-6">
                 <!--Si on résoud le problème des glyphicon Bootstrap on pourrait en placer dans les contacts-->
-                <p class="title_contact text-xl-left">Contacts</p>
-                <p class="text-lg-left">Lorem ipsum....</p>
-                <p class="text-lg-left">Lorem ipsum....</p>
+                <p class="title_contact text-xl-left">Contactez nous</p>
+                <p class="text-lg-left"><span style="color:#9fb757;" class="fas fa-home"></span>   Avenue de l'Astronomie 19, 1210 Saint-Josse-ten-Noode</p>
+                <p class="text-lg-left"><span style="color:#9fb757;" class="fas fa-phone"></span>   02/ 777 10 10</p>
+                <p class="text-lg-left"><span style="color:#9fb757;" class="fas fa-at"></span>   info@caviste.be</p>
             </div>
         </footer>
         <!-- Jquery -->
