@@ -26,13 +26,14 @@ header{
 
 h1{
     font-family: 'Rouge Script', cursive;
+    text-align: center;
     padding-top: 200px;
     padding-bottom: 40px;
     padding-left: 5%;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     color:white;
-    text-shadow: 5px 5px 5px grey;
+    text-shadow: 5px 5px 5px black;
 }
 
 .logo_header{
@@ -40,9 +41,36 @@ h1{
     padding:10%
 }
 
+/* BUTTONS */
+
+
+button, .btn{
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    font-size: 1.5em;
+    font-family: 'Rouge Script', cursive;
+}
+
+button:hover , .btn:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+    font-size: 1.5em;
+    font-family: 'Rouge Script', cursive;
+}
+
+#div-carousel > div > div > div > div > div > button.slick-next.slick-arrow, button.slick-prev.slick-arrow{
+    color: black;
+}
+
 /* FORM */
+
 .idlabel{
     display: none;
+}
+#frmInfos > div > label{
+    font-size: 1.5em;
 }
 
 .form_group{
@@ -61,7 +89,33 @@ h1{
     background-image: url("../images/bottle_backgroung.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    position: static;
+    background-position: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
+
+/*  DYNAMIC IMG OF BOTTLE  */
+ 
+#col-img > img{
+    position: relative;
+    top: 50%;
+    min-width:100%; 
+    padding-top: 50%;
+    padding-bottom: auto;
+} 
+
+
+.likeThisWine{
+    position:relavive;
+    width:90%;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 50%;
+} 
+
+/*  INFO WINE  */
 
 .forms_wine{
     padding-left: 5%;
@@ -75,32 +129,13 @@ h1{
     color: white;
 }
 
-#frmSearchAdd > div > button{
-    font-family: 'Rouge Script', cursive;
-    font-size: 1.5em;
-    border-color: black;
-    color:black;
-}
-
-#frmSearchAdd > div > button:hover {
-    color:white;
-    border-color: white;
-    background-color: black;
-}
-
-.btn{
-    font-family: 'Rouge Script', cursive;
-    border-color: white;
-    color: white;
-    font-size: 1.5em;
-}
-
 #frmSearchAdd > div > input{
     font-size: 1em;
 }
 
-:hover#searchbox{
+:hover#searchbox,textarea,input{
     border-color: #af001f;
+    border-width: 5px;
 }
 
 #frmInfos > div.form-group.text-center >:hover{
@@ -109,13 +144,18 @@ h1{
     background-color: white;
 }
 /* WINES TAB */
+
+#frmInfos{
+    padding-top: 30px;
+}
+
 #col-tabWines{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
     border: 1px solid white;
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
+    margin-top: 20px;
     margin-bottom: auto;
 }
 input{
@@ -133,11 +173,91 @@ tr:hover {
     background-color:  #af001f;
 }
 
+button, input:hover{
+    border-color:  #af001f;;
+}
+
+/* COMMENTS */
+
+body {
+    min-width: 300px;
+}
+
+.comment-container{
+    margin-top: 35px;
+    padding-left: 35px;
+    padding-top: 25px;
+}
+
+.comment {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    *zoom: 1;
+}
+
+.comment-img {
+    float: left;
+    padding-right: 33px;
+    padding-top: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.comment-img img {
+    display: block;
+}
+
+.comment-body {
+    padding-top: 15px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+.comment .text {
+    color: black;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background: #fff;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+a, #main-content > div.col-sm-12.col-md-8.order-sm-3 > div > div:nth-child(3) > section > article > div > p > a{
+    color:#9fb757;
+}
+
+#main-content > div.col-sm-12.col-md-8.order-sm-3 > div > div:nth-child(3) > section > article > div > p > a:hover{
+    color:#61823b;
+}
+
+/* COMMENT DECORATION */
+
+
+.comments,
+.comment {
+    position: relative;
+}
+
+.comments:before,
+.comment:before,
+.comment .text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 65px;
+}
+ 
 
 /* CAROUSEL */
 
 body {
-    padding: 30px 0;
+    padding-left: 30px 0;
+    padding-right: 30px 0;
   }
 
 .carousel{
@@ -186,7 +306,7 @@ body {
   }
   
 .slick-arrow {
-    display: none;
+    display: outside;
   }
   
 .slick-prev {
@@ -200,7 +320,7 @@ body {
 /*  CAPTION  */
 
 .modal-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
 }
   
 .caption-item {  
@@ -231,10 +351,6 @@ body {
   
 /* CAPTION LAYER */
   
-.caption-layer.blue {
-    background: lightgrey;
-  }
-  
 .caption-link .caption-layer:hover,
 .caption-layer.video-icon {
     opacity: 1;
@@ -253,18 +369,6 @@ body {
     display: none;
   }
 
-
-.contact{
-    color: white;
-    font-size: 1.5em;
-}
-
-.title_contact{
-    padding-top: 50px;
-    font-weight: bold;
-    font-size: 2em;
-}
-
 /* FOOTER */
 
 .logo_footer{
@@ -279,8 +383,21 @@ footer{
     display:inline;
 }
 
-/* MEDIA QUERIES */
+.contact{
+    color: white;
+    font-size: 1.2em;
+    padding-left: 40px;
+}
 
+.title_contact{
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 2.3em;
+    padding-left: 20px;
+}
+
+/* MEDIA QUERIES */
+/* 
 @media (min-width:3000px){
 
     body{
@@ -306,4 +423,5 @@ footer{
         margin-left: 10%;
         margin-right: 10%;
     }
-}
+} 
+*/
