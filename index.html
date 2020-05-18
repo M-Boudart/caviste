@@ -18,15 +18,24 @@
     </head>
     <body>
         <header class="row">
-            <div class="col-md-12">
-                <p class="language text-xl-left"> FR / NL</p>
+            <div class="col-md-12 mt-2">
+                <form id="frmLogIn" action="http://localhost/caviste/index.php" method="POST">
+                  <div class="form-row">
+                    <div class="col">
+                      <input name="login" type="text" class="form-control" placeholder="Login" required>
+                    </div>
+                    <div class="col">
+                      <input name="pwd" type="password" class="form-control" placeholder="Mot de passe" required>
+                    </div>
+                    <div class="col">
+                      <button class="btn btn-primary" name="btLogIn" style="color: black; border: 1px black solid;">Se connecter</button>
+                    </div>
+                  </div>
+                </form>
             </div>
             <div style="text-align: center;" class="col-md-6">
                 <img class="logo_header" src="images/caviste_logo_black.png" alt="Logo caviste">
             </div>
-            <nav class="col-md-6">
-            <!--Le menu de navigation doit encore venir ici-->
-            </nav>
             <div class="slogan col-md-12">
                 <h1 class="text-xl-center">Toujours un bon vin en cave !</h1>
             </div>
