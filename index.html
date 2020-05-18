@@ -19,7 +19,8 @@
     <body>
         <header class="row">
             <div class="col-md-12 mt-2">
-                <form id="frmLogIn" action="http://localhost/caviste/index.php" method="POST">
+                <!-- Formulaire de connection -->
+                <form id="frmLogIn" action="http://localhost/caviste/index.html" method="POST">
                   <div class="form-row">
                     <div class="col">
                       <input name="login" type="text" class="form-control" placeholder="Login" required>
@@ -28,10 +29,15 @@
                       <input name="pwd" type="password" class="form-control" placeholder="Mot de passe" required>
                     </div>
                     <div class="col">
-                      <button class="btn btn-primary" name="btLogIn" style="color: black; border: 1px black solid;">Se connecter</button>
+                      <button id="btLogIn" class="btn btn-primary" name="btLogIn" style="color: black; border: 1px black solid;">Se connecter</button>
                     </div>
                   </div>
                 </form>
+                <!-- Utilisateur connecté -->
+                <div id="divConnectedUser">
+                  <p></p>
+                  <button id="btLogOut" class="btn btn-primary" name="btLogOut" style="color: black; border: 1px black solid; display: inline;">Se déconnecter</button>
+                </div>
             </div>
             <div style="text-align: center;" class="col-md-6">
                 <img class="logo_header" src="images/caviste_logo_black.png" alt="Logo caviste">
@@ -288,5 +294,6 @@
         <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
         <!-- Scripts perso -->
         <script src="lib/displayWines.js"></script>
+        <script src="lib/connection.js"></script>
     </body>
 </html>
