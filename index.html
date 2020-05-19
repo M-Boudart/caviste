@@ -68,13 +68,11 @@
 
 
                   <!--IMAGE OF WINES-->
-                  <div class="bottle center-block col-sm-12 col-md-5 col">
+                  <div id ="col-imgWine" class="bottle center-block col-sm-12 col-md-5 col">
                     <div id="col-img" class="bottle-img img-fluid center-block">
                         <img class="bottle-img img-fluid" src="images/vin.png" alt="Bouteille de vin">
                     </div>
-                    <div>
-                        <img class="likeThisWine" src="images/likeThisWine.png">
-                    </div>
+                    <img class="likeThisWine" src="images/likeThisWine.png">
                   </div>
 
                   <!--INFO OF WINES-->
@@ -136,7 +134,7 @@
                   <div class="col-sm-12 col-md-8 order-sm-3">
                     <div class="row">
                       <div class="comment-container">
-                        <button class="btn btn-outline-dark btn-lg" type="button"><span style="color:#af001f;" class="fas fa-heart"></span> J'aime ce vin</button>
+                        <button id="btLike" class="btn btn-outline-dark btn-lg" type="button"><span style="color:#af001f;" class="fas fa-heart"></span> J'aime ce vin</button>
                       </div>
                       <div class="comment-container">
                         <button class="btn btn-outline-dark btn-lg" type="button">Ajouter un commentaire</button>
@@ -296,5 +294,6 @@
         <!-- Scripts perso -->
         <script src="lib/displayWines.js"></script>
         <script src="lib/connection.js"></script>
+        <script src="lib/likeManagement.js"></script>
     </body>
 </html>
