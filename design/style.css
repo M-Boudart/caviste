@@ -113,7 +113,19 @@ button:hover , .btn:hover {
     padding-top: auto;
     padding-bottom: auto;
     padding-left: 50%;
-} 
+}
+
+.likeCounter {
+    width: 100px;
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 5px;
+    background-color: #af001f;
+    border-radius: 5px;
+    color: white;
+}
 
 /*  INFO WINE  */
 
