@@ -57,7 +57,6 @@
                         <button name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
                             Rechercher
                         </button>
-                        <button name="btAdd" type="button" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">Ajouter un vin</button>
                     </div>
                 </form>
             </div>
@@ -103,10 +102,6 @@
                               <label for="year">Année:</label>
                               <input class="form-control" id="year" type="text" name="year" required>
                           </div>
-
-
-
-                          <!--INSERER  PRIX &  CAPACITE-->
                           <div class="price form-group">
                             <label for="price">Prix:</label>
                             <input class="form-control" id="price" type="text" name="price" required>
@@ -115,8 +110,6 @@
                             <label for="capacity">Capacité:</label>
                             <input class="form-control" id="capacity" type="text" name="capacity" required>
                           </div>
-
-
                           <div class="form-group">
                               <label for="description">Description:</label>
                               <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
@@ -133,39 +126,59 @@
                 </div>
                   <!--LIST OF COMMENT              TO DO -->
                   <div class="col-sm-12 col-md-8 order-sm-3">
-                    <div class="row">
-                      <div class="comment-container">
+                    <div>
+                      <!-- <div> -->
                         <button id="btLike" class="btn btn-outline-dark btn-lg" type="button"><span style="color:#af001f;" class="far fa-heart"></span> J'aime ce vin</button>
-                      </div>
-                      <div class="comment-container">
-                        <button class="btn btn-outline-dark btn-lg" type="button">Ajouter un commentaire</button>
+                        <button class="btn btn-outline-dark btn-lg" data-toggle="modal" data-target="#newComment" data-whatever="@getbootstrap">Ecrire un commentaire</button>
                         <button class="btn btn-outline-dark btn-lg" type="button">Modifier un commentaire</button>
-                      </div>
+
+                        <!--MODAL ADD COMMENT-->
+                        <div class="modal fade" id="newComment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <img class="img-fluid" style="width:20%; padding:10px;" src="images/caviste_logo_black.png" alt="Logo caviste">
+                                <h3>Vous allez écrire un commentaire au sujet du vin</h3>     
+                                  <!--Ajouter nom du vin sélectionné-->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="form-group">
+
+                                    <input hidden type="text" class="form-control" id="login-name" value="">
+
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Votre commentaire:</label>
+                                    <textarea class="form-control" rows="5" id="message-text"></textarea>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button name="fermer" type="button" class="btn btn-outline btn-lg" data-dismiss="modal">Fermer</button>
+                                <button id="btSendComment" name="envois" type="button" class="btn btn-outline btn-lg">Envoyer</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      <!-- </div> -->
                       <div class="comment-container">
                         <section class="comments">
-                          <article class="comment">
-                            <a class="comment-img">
-                              <img src="images/caviste_logo_white.png" alt="image de profil utilisateur" height="120">
-                            </a>
-                            <div class="comment-body">
-                              <div class="text">
-                                <p>Ce vin est délicieux, achetez le sans attendre ! :) </p>
+                          <!--Affichage des commentaires-->
+                          <div id="commentaires"></div>
+                          
+                            <article style="padding-top: 40px;">
+                              <div>
+                                <div>
+                                  <h2 class="bienvenue">Découvrez nos meilleures sélections de vins</h2>
+                                  <p>Si vous souhaitez commenter un vin ou en acheter, vous devez au préalable vous enregistrer:  <a target="_blank" href="http://www.facebook.com/besnik.hetemii">Je m'enregistre</a> car j'aime le bon vin.</p>
+                                </div>
+                                <p class="attribution signature">L'<a href="#non">équipe Caviste</a> qui vous souhaite la bienvenue !</p>
                               </div>
-                              <p class="attribution">by <a href="#non">Besnik Hetemi</a> at 14:23pm, 4 Dec 2015</p>
-                            </div>
-                          </article>
-                            <article class="comment">
-                            <a class="comment-img">
-                              <img src="images/caviste_logo_white.png" alt="images de profil utilisateur"  height="120">
-                            </a>
-                            <div class="comment-body">
-                              <div class="text">
-                                <p>if you are interested for  more about me visited my profile on social page</p>
-                                <p>To visit me you can click my name  <a target="_blank" href="http://www.facebook.com/besnik.hetemii">Besnik Hetemi</a> and send me frends request or send me a message in inbox</p>
-                              </div>
-                              <p class="attribution">by <a href="#non">Besnik Hetemi</a> at 14:23pm, 4 Dec 2015</p>
-                            </div>
-                          </article>
+                            </article>
                         </section>
                       </div>
                     </div>
@@ -276,7 +289,6 @@
                 <img class="logo_footer" src="images/caviste_logo_white.png" alt="Logo caviste">
             </div>
             <div class="contact col-sm-12 col-md-6">
-                <!--Si on résoud le problème des glyphicon Bootstrap on pourrait en placer dans les contacts-->
                 <p class="title_contact text-xl-left">Contactez nous</p>
                 <p class="text-lg-left"><span style="color:#9fb757;" class="fas fa-home"></span>   Avenue de l'Astronomie 19, 1210 Saint-Josse-ten-Noode</p>
                 <p class="text-lg-left"><span style="color:#9fb757;" class="fas fa-phone"></span>   02/ 777 10 10</p>
@@ -296,5 +308,6 @@
         <script src="lib/displayWines.js"></script>
         <script src="lib/connection.js"></script>
         <script src="lib/likeManagement.js"></script>
+        <script src="lib/comment.js"></script>
     </body>
 </html>

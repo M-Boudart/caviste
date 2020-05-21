@@ -41,8 +41,26 @@ h1{
     padding:10%
 }
 
-/* BUTTONS */
+/* INPUT */
 
+.form-control:focus {
+    border-color: #af001f;
+    box-shadow:#af001f ;
+    box-shadow: 0 0 0 0.1rem #af001f;
+} 
+
+.form-control:hover {
+    border-color: #af001f;
+    box-shadow:#af001f ;
+    box-shadow: 0 0 0 0.1rem #af001f;
+}
+
+#livesearch{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* BUTTONS */
 
 button, .btn{
     background-color: transparent;
@@ -199,6 +217,7 @@ body {
     margin-top: 35px;
     padding-left: 35px;
     padding-top: 25px;
+    width: 50%;
 }
 
 .comment {
@@ -217,6 +236,10 @@ body {
 
 .comment-img img {
     display: block;
+}
+
+#commentaires > article > a > img, #commentaires > img{
+    height:120px;
 }
 
 .comment-body {
@@ -249,7 +272,6 @@ a, #main-content > div.col-sm-12.col-md-8.order-sm-3 > div > div:nth-child(3) > 
 
 /* COMMENT DECORATION */
 
-
 .comments,
 .comment {
     position: relative;
@@ -263,7 +285,42 @@ a, #main-content > div.col-sm-12.col-md-8.order-sm-3 > div > div:nth-child(3) > 
     top: 0;
     left: 65px;
 }
+
+.bienvenue{
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.signature{
+    padding-bottom:30px ;
+}
  
+/* COMMENT MODAL */
+
+#exampleModalLabel{
+    font-size: 2em;
+}
+
+.modal-header{
+    color:black;
+}
+.modal-body{
+    color:black;
+}
+
+.modal-footer > button{
+    background-color: white;
+    color:black;
+    border-color: black;
+}
+
+.modal-footer > button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
 
 /* CAROUSEL */
 
