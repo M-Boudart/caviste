@@ -48,13 +48,13 @@
         </header>
         <!--Les boutons de recherche à placer ici en dessous-->
         <div class="forms_background col-12">
-          <div id="search-add-wine" class="row">
+          <div id="search-sort-wine" class="row">
             <div class="col-12">
-                <form id="frmSearchAdd" action="http://localhost/caviste/index.php" method="GET">
+                <form id="frmSearchSort" action="http://localhost/caviste/index.html" method="GET">
                     <div class="form_group">
                         <!--Il serait bien d'alligner ces 3 éléments ci-dessous-->
-                        <input id="livesearch" class="searchbox form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche"> 
-                        <button name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
+                        <input id="search" class="searchbox form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche" value=""> 
+                        <button id = "btSearch" name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
                             Rechercher
                         </button>
                         <button name="btAdd" type="button" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">Ajouter un vin</button>
@@ -62,9 +62,9 @@
                 </form>
             </div>
         </div>
-            <div id="main-content" class="row conteiner-fluid">
+            <div id="main-content" class="row container-fluid">
 
-                <div class="row conteiner-fluid col-sm-12 col-md-8 order-sm-2">
+                <div class="row container-fluid col-sm-12 col-md-8 order-sm-2">
 
 
                   <!--IMAGE OF WINES-->
@@ -88,7 +88,7 @@
                               <input class="form-control" id="name" type="text" name="name" required>
                           </div>
                           <div class="form-group">
-                          <label for="grapes">Grapes:</label>
+                          <label for="grapes">Cépage:</label>
                               <input class="form-control" id="grapes" type="text" name="grapes" required>
                           </div>
                           <div class="form-group">
@@ -277,7 +277,7 @@
             </div>
             <div class="contact col-sm-12 col-md-6">
                 <!--Si on résoud le problème des glyphicon Bootstrap on pourrait en placer dans les contacts-->
-                <p class="title_contact text-xl-left">Contactez nous</p>
+                <p class="title_contact text-xl-left">Contactez-nous</p>
                 <p class="text-lg-left"><span style="color:#9fb757;" class="fas fa-home"></span>   Avenue de l'Astronomie 19, 1210 Saint-Josse-ten-Noode</p>
                 <p class="text-lg-left"><span style="color:#9fb757;" class="fas fa-phone"></span>   02/ 777 10 10</p>
                 <p class="text-lg-left"><span style="color:#9fb757;" class="fas fa-at"></span>   info@caviste.be</p>
@@ -296,5 +296,6 @@
         <script src="lib/displayWines.js"></script>
         <script src="lib/connection.js"></script>
         <script src="lib/likeManagement.js"></script>
+        <script src="lib/searchWines.js"></script>
     </body>
 </html>
