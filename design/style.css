@@ -295,7 +295,17 @@ a, #main-content > div.col-sm-12.col-md-8.order-sm-3 > div > div:nth-child(3) > 
 .signature{
     padding-bottom:30px ;
 }
- 
+#noComment > h2 {
+    margin-top: 40px;
+}
+.greenColor {
+    color:#9fb757;
+}
+
+.redColor {
+    color: #af001f;
+    font-weight: bold;
+}
 /* COMMENT MODAL */
 
 #exampleModalLabel{

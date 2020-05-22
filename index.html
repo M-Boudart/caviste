@@ -129,8 +129,8 @@
                     <div>
                       <!-- <div> -->
                         <button id="btLike" class="btn btn-outline-dark btn-lg" type="button"><span style="color:#af001f;" class="far fa-heart"></span> J'aime ce vin</button>
-                        <button id="btAddComment"class="btn btn-outline-dark btn-lg" data-toggle="modal" data-target="#newComment" data-whatever="@getbootstrap">Ecrire un commentaire</button>
-
+                        <button id="btOpenModalComment"class="btn btn-outline-dark btn-lg" data-toggle="modal" data-target="#newComment" data-whatever="@getbootstrap">Ecrire un commentaire</button>
+                        <div id="noComment"></div>
                         <!--MODAL ADD COMMENT-->
                         <div class="modal fade" id="newComment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog" role="document">
@@ -144,7 +144,7 @@
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <form>
+                                <form id="frmAddComment">
                                   <div class="form-group">
 
                                     <input hidden type="text" class="form-control" id="login-name" value="">
