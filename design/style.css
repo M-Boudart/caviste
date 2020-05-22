@@ -80,7 +80,7 @@ button:hover , .btn:hover {
     padding-bottom: 20px;
 }
 
-#frmSearchAdd > div > input{
+#frmSearchSort > div > input{
     font-size: 1.5em;
 }
 
@@ -141,7 +141,7 @@ button:hover , .btn:hover {
     color: white;
 }
 
-#frmSearchAdd > div > input{
+#frmSearchSort> div > input{
     font-size: 1em;
 }
 
