@@ -131,7 +131,7 @@ button:hover , .btn:hover {
     padding-top: auto;
     padding-bottom: auto;
     padding-left: 50%;
-    /* margin-top: 80%; */
+    margin-top: 80%;
 }
 
 .likeCounter {
@@ -144,7 +144,7 @@ button:hover , .btn:hover {
     background-color: #af001f;
     border-radius: 5px;
     color: white;
-    /* margin-top: 80%; */
+    margin-top: 80%;
 }
 
 /*  INFO WINE  */
@@ -183,7 +183,6 @@ button:hover , .btn:hover {
 
 #col-tabWines{
     font-family: Verdana, Tahoma, sans-serif;
-    border: 1px solid white;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -199,6 +198,7 @@ textarea{
 
 tr {
     color: white;
+    border: 1px white solid;
 }
 
 tr:hover {
