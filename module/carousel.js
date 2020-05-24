@@ -54,4 +54,4 @@
             return false;
         });
         
-    }); // (function)
+    });
