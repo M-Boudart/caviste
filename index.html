@@ -161,7 +161,8 @@
                               <form id="frmUpload" action="" enctype="multipart/form-data" method="POST">
                               <div class="form-group">
                                 <!-- <input type="hidden" name="MAX_FILE_SIZE" value="20000"> -->
-                                <input type="file" id="file-input" />
+                                <input type="file" name="picture" id="file-input">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="100">
                                 <button id="upload-button" style="background-color: #af001f;" class="btn btn-outline-dark btn-lg">Upload File</button>
 
                                 <!-- <input id="fileImg" name="file" type="file">
