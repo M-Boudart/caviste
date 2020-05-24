@@ -474,6 +474,15 @@ footer{
     padding-left: 20px;
 }
 
+#mapid { 
+    height: 400px; 
+    
+   
+}
+#map_container{
+    padding: 20px;
+}
+
 /* MEDIA QUERIES */
 /* 
 @media (min-width:3000px){
