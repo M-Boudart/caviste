@@ -181,7 +181,6 @@ button:hover , .btn:hover {
 
 #col-tabWines{
     font-family: Verdana, Tahoma, sans-serif;
-    border: 1px solid white;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -197,6 +196,7 @@ textarea{
 
 tr {
     color: white;
+    border: 1px solid white;
 }
 
 tr:hover {
@@ -332,10 +332,6 @@ a, #main-content > div.col-sm-12.col-md-8.order-sm-3 > div > div:nth-child(3) > 
 }
 
 /* CAROUSEL */
-
-.invisible{
-    display: none;
-}
 
 body {
     padding-left: 30px 0;

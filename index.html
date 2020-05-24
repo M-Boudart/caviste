@@ -53,13 +53,13 @@
         </header>
         <!--Les boutons de recherche à placer ici en dessous-->
         <div class="forms_background col-12">
-          <div id="search-add-wine" class="row">
+          <div id="search-sort-wine" class="row">
             <div class="col-12">
-                <form id="frmSearchAdd" action="http://localhost/caviste/index.php" method="GET">
+                <form id="frmSearchSort" action="http://localhost/caviste/index.html" method="GET">
                     <div class="form_group">
                         <!--Il serait bien d'alligner ces 3 éléments ci-dessous-->
-                        <input id="livesearch" class="searchbox form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche"> 
-                        <button name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
+                        <input id="search" name="search" class="searchbox form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche"> 
+                        <button id="btSearch" name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
                             Rechercher
                         </button>
                     </div>
@@ -365,5 +365,6 @@
         <script src="lib/likeManagement.js"></script>
         <script type="module" src="lib/comment.js"></script>
         <script src="lib/imageWine.js"></script>
+        <script src="lib/searchWines.js"></script>
     </body>
 </html>
