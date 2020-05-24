@@ -8,7 +8,6 @@
         <!-- Slick -->
         <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
 	    	<!-- CSS Perso -->
-        
         <link rel="stylesheet" href="design/style.css">
         <!--Police-->
         <link href="https://fonts.googleapis.com/css?family=Rouge+Script&display=swap" rel="stylesheet">
@@ -69,17 +68,34 @@
         </div>
             <div id="main-content" class="row conteiner-fluid">
 
-                <div class="row conteiner-fluid col-sm-12 col-md-8 order-sm-2">
+              <div class="row conteiner-fluid col-sm-12 col-md-8 order-sm-2">
+                <!--IMAGE OF WINES-->
 
+                <!-- Compteur et Affichage like -->
+                <div id ="col-imgWine" class="bottle center-block col-sm-12 col-md-5 col">
+                  <p class="likeCounter"></p>
+                  <img class="likeThisWine" src="images/likeThisWine.png">
 
-                  <!--IMAGE OF WINES-->
-                  <div id ="col-imgWine" class="bottle center-block col-sm-12 col-md-5 col">
-                    <div id="col-img" class="bottle-img img-fluid center-block">
-                        <img class="bottle-img img-fluid" src="images/vin.png" alt="Bouteille de vin">
+                    <!-- Carousel dynamique -->
+                    <div id="vin" class="carousel slide" data-ride="carousel">
+                      <ol id="circle" class="carousel-indicators">
+                        <li data-target="#vin" data-slide-to="0" class="active"></li>
+                        <li data-target="#vin" data-slide-to="1"></li>
+                        <li data-target="#vin" data-slide-to="2"></li>
+                      </ol>
+                      <div id="wineCarousel" class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img id="vin1" class="d-block w-100" src="images/wines/generic.png" alt="Premier slide bouteille de vin">
+                        </div>
+                        <div class="carousel-item">
+                          <img id="vin2" class="d-block w-100" src="images/wines/block_nine.png" alt="Second slide bouteille de vin">
+                        </div>
+                        <div class="carousel-item">
+                          <img id="vin3" class="d-block w-100" src="images/wines/lan_rioja.png" alt="Troisième slide bouteille de vin">
+                        </div>
+                      </div>
                     </div>
-                    <p class="likeCounter"></p>
-                    <img class="likeThisWine" src="images/likeThisWine.png">
-                  </div>
+                </div>
 
                   <!--INFO OF WINES-->
                   <div id="col-frmInfos" class="forms_wine col-sm-12 col-md-7">
@@ -120,17 +136,44 @@
                               <label for="description">Description:</label>
                               <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                           </div>
-                          <div class="form-group text-center">
-                              <button name="btModifiy" type="button" class="btn btn-outline-dark btn-lg">Modifier</button>
-                              <button name="btDelete" type="button" class="btn btn-outline-dark btn-lg">Supprimer</button>
-                          </div>
                       </form>
                     </div>
-                </div>
-                <!--LIST OF WINES-->
-                <div id="col-tabWines" class="col-tabWines col-sm-12 col-md-4 order-first">
-                  
-                </div>
+                    <button id="btAddImg"class="btn btn-outline-dark btn-lg" data-toggle="modal" data-target="#newImg">Ajouter une image</button>
+                    <button id="btDeleteImg"class="btn btn-outline-dark btn-lg" >Supprimer une image</button>
+                    </div>
+
+                      <!--MODAL ADD IMAGES-->
+                      <div class="modal fade" id="newImg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <img class="img-fluid" style="width:20%; padding:10px;" src="images/caviste_logo_black.png" alt="Logo caviste">
+                              <h3>Vous allez ajouter une image au vin</h3>     
+                                <!--Ajouter nom du vin sélectionné-->
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+
+                              <form id="frmUpload" action="" enctype="multipart/form-data" method="POST">
+                              <div class="form-group">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="20000">
+                                <input id="fileImg" name="file" type="file">
+                                <button id="btSendImg" style="background-color: #af001f;" name="upload" type="submit" class="btn btn-outline-dark btn-lg">envoyer</button>
+                              </div>
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+
+
+                  <!--LIST OF WINES-->
+                  <div id="col-tabWines" class="col-tabWines col-sm-12 col-md-4 order-first">
+                    
+                  </div>
                   <!--LIST OF COMMENT              TO DO -->
                   <div class="col-sm-12 col-md-6 order-sm-3">
                     <div>
@@ -180,7 +223,7 @@
                               <div>
                                 <div>
                                   <h2 class="bienvenue">Découvrez nos meilleures sélections de vins</h2>
-                                  <p>Si vous souhaitez commenter un vin ou en acheter, vous devez au préalable vous enregistrer:  <a target="_blank" href="http://www.facebook.com/besnik.hetemii">Je m'enregistre</a> car j'aime le bon vin.</p>
+                                  <p>Si vous souhaitez commenter un vin ou en acheter, vous devez au préalable vous enregistrer:  <a target="_blank" href="#bienvenue">Je m'enregistre</a> car j'aime le bon vin.</p>
                                 </div>
                                 <p class="attribution signature">L'<a href="#non">équipe Caviste</a> qui vous souhaite la bienvenue !</p>
                               </div>
@@ -207,7 +250,7 @@
                             <a class="caption-link">
                               <div class="caption-layer light-green">
                                 <div class="caption-content">
-                                  <h3>Bodega Lurton</h3>
+                                  <h3 class="invisible">Bodega Lurton</h3>
                                   <p class="hidden">Solid notes of black currant blended with a light citrus make this wine an easy pour for varied palates.</p>
                                 </div>
                               </div>
@@ -219,7 +262,7 @@
                             <a class="caption-link">
                               <div class="caption-layer light-green">
                                 <div class="caption-content">
-                                  <h3>Rex Hill</h3>
+                                  <h3 class="invisible">Rex Hill</h3>
                                   <p class="hidden">One cannot doubt that this will be the wine served at the Hollywood award shows, because it has undeniable star power. Be the first to catch the debut that everyone will be talking about tomorrow.</p>
                                 </div>
                               </div>
@@ -231,7 +274,7 @@
                             <a class="caption-link">
                               <div class="caption-layer light-green">
                                 <div class="caption-content">
-                                  <h3>Chateau Le Doyenne</h3>
+                                  <h3 class="invisible">Chateau Le Doyenne</h3>
                                   <p class="hidden">Though dense and chewy, this wine does not overpower with its finely balanced depth and structure. It is a truly luxurious experience for the senses.</p>
                                 </div>
                               </div>
@@ -243,7 +286,7 @@
                             <a class="caption-link">
                               <div class="caption-layer light-green">
                                 <div class="caption-content">
-                                  <h3>Lan Rioja</h3>
+                                  <h3 class="invisible">Lan Rioja</h3>
                                   <p class="hidden">A resurgence of interest in boutique vineyards has opened the door for this excellent foray into the dessert wine market. Light and bouncy, with a hint of black truffle, this wine will not fail to tickle the taste buds.</p>
                                 </div>
                               </div>
@@ -255,7 +298,7 @@
                             <a class="caption-link">
                               <div class="caption-layer light-green">
                                 <div class="caption-content">
-                                  <h3>Margerum</h3>
+                                  <h3 class="invisible">Margerum</h3>
                                   <p class="hidden">The cache of a fine Cabernet in ones wine cellar can now be replaced with a childishly playful wine bubbling over with tempting tastes of black cherry and licorice. This is a taste sure to transport you back in time.</p>
                                 </div>
                               </div>
@@ -267,7 +310,7 @@
                             <a class="caption-link">
                               <div class="caption-layer light-green">
                                 <div class="caption-content">
-                                  <h3>Morizottes</h3>
+                                  <h3 class="invisible">Morizottes</h3>
                                   <p class="hidden">Breaking the mold of the classics, this offering will surprise and undoubtedly get tongues wagging with the hints of coffee and tobacco in perfect alignment with more traditional notes. Breaking the mold of the classics, this offering will surprise and undoubtedly get tongues wagging with the hints of coffee and tobacco in perfect alignment with more traditional notes. Sure to please the late-night crowd with the slight jolt of adrenaline it brings.</p>
                                 </div>
                               </div>
@@ -279,7 +322,7 @@
                             <a class="caption-link">
                               <div class="caption-layer light-green">
                                 <div class="caption-content">
-                                  <h3>Saint-Cosme</h3>
+                                  <h3 class="invisible">Saint-Cosme</h3>
                                   <p class="hidden">The aromas of fruit and spice give one a hint of the light drinkability of this lovely wine, which makes an excellent complement to fish dishes.</p>
                                 </div>
                               </div>
@@ -321,5 +364,6 @@
         <script type="module" src="lib/connection.js"></script>
         <script src="lib/likeManagement.js"></script>
         <script type="module" src="lib/comment.js"></script>
+        <script src="lib/imageWine.js"></script>
     </body>
 </html>
