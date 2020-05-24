@@ -53,13 +53,13 @@
         </header>
         <!--Les boutons de recherche à placer ici en dessous-->
         <div class="forms_background col-12">
-          <div id="search-sort-wine" class="row">
+          <div id="search-add-wine" class="row">
             <div class="col-12">
-                <form id="frmSearchSort" action="http://localhost/caviste/index.html" method="GET">
+                <form id="frmSearchAdd" action="http://localhost/caviste/index.php" method="GET">
                     <div class="form_group">
                         <!--Il serait bien d'alligner ces 3 éléments ci-dessous-->
-                        <input id="search" name="search" class="searchbox form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche"> 
-                        <button id="btSearch" name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
+                        <input id="livesearch" class="searchbox form-control col-lg-3 col-md-6 col-sm-8 col-xs-12 text-lg-left" type="text" placeholder="Votre recherche"> 
+                        <button name="btSearch" class="col-lg-3 col-md-3 col-sm-8 col-xs-12 btn btn-outline-dark btn-lg" type="button">
                             Rechercher
                         </button>
                     </div>
@@ -71,10 +71,9 @@
               <div class="row conteiner-fluid col-sm-12 col-md-8 order-sm-2">
                 <!--IMAGE OF WINES-->
 
-                <!-- Compteur et Affichage like -->
+
                 <div id ="col-imgWine" class="bottle center-block col-sm-12 col-md-5 col">
-                  <p class="likeCounter"></p>
-                  <img class="likeThisWine" src="images/likeThisWine.png">
+
 
                     <!-- Carousel dynamique -->
                     <div id="vin" class="carousel slide" data-ride="carousel">
@@ -85,16 +84,19 @@
                       </ol>
                       <div id="wineCarousel" class="carousel-inner">
                         <div class="carousel-item active">
-                          <img id="vin1" class="d-block w-100" src="images/wines/generic.png" alt="Premier slide bouteille de vin">
+                          <img id="vin1" class="img-fluid d-block w-100" src="images/wines/generic.png" alt="Premier slide bouteille de vin">
                         </div>
                         <div class="carousel-item">
-                          <img id="vin2" class="d-block w-100" src="images/wines/block_nine.png" alt="Second slide bouteille de vin">
+                          <img id="vin2" class="img-fluid d-block w-100" src="images/wines/block_nine.png" alt="Second slide bouteille de vin">
                         </div>
                         <div class="carousel-item">
-                          <img id="vin3" class="d-block w-100" src="images/wines/lan_rioja.png" alt="Troisième slide bouteille de vin">
+                          <img id="vin3" class="img-fluid d-block w-100" src="images/wines/lan_rioja.png" alt="Troisième slide bouteille de vin">
                         </div>
                       </div>
                     </div>
+                    <!-- Compteur et Affichage like -->
+                    <img class="likeThisWine" src="images/likeThisWine.png">
+                    <p class="likeCounter"></p>
                 </div>
 
                   <!--INFO OF WINES-->
@@ -158,11 +160,13 @@
 
                               <form id="frmUpload" action="" enctype="multipart/form-data" method="POST">
                               <div class="form-group">
-                                <input type="hidden" name="MAX_FILE_SIZE" value="20000">
-                                <input id="fileImg" name="file" type="file">
-                                <button id="btSendImg" style="background-color: #af001f;" name="upload" type="submit" class="btn btn-outline-dark btn-lg">envoyer</button>
-                              </div>
+                                <!-- <input type="hidden" name="MAX_FILE_SIZE" value="20000"> -->
+                                <input type="file" id="file-input" />
+                                <button id="upload-button" style="background-color: #af001f;" class="btn btn-outline-dark btn-lg">Upload File</button>
 
+                                <!-- <input id="fileImg" name="file" type="file">
+                                <button id="btSendImg" style="background-color: #af001f;" name="upload" type="submit" class="btn btn-outline-dark btn-lg">envoyer</button> -->
+                              </div>
                             </form>
                           </div>
                         </div>
@@ -357,14 +361,13 @@
         <!-- Bootstrap -->
 	    	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- Slick -->
-        <script src="module/carousel.js"></script>
+        <script src="lib/carousel.js"></script>
         <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
         <!-- Scripts perso -->
-        <script type="module" src="lib/displayWines.js"></script>
+        <script src="lib/displayWines.js"></script>
         <script type="module" src="lib/connection.js"></script>
         <script src="lib/likeManagement.js"></script>
         <script type="module" src="lib/comment.js"></script>
         <script src="lib/imageWine.js"></script>
-        <script src="lib/searchWines.js"></script>
     </body>
 </html>
